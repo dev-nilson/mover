@@ -25,7 +25,7 @@ export default function NavOptions() {
               style={{ width: 125, height: 125, resizeMode: "contain" }}
               source={{ uri: item.image }}
             />
-            <Text style={tw`mt-2 text-md font-semibold text-center`}>
+            <Text style={tw`mt-2 text-lg font-semibold text-center`}>
               {item.title}
             </Text>
             <Icon
