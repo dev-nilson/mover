@@ -14,8 +14,6 @@ const data = [
 ];
 
 export default function NavOptions({ handlePress }) {
-  const navigation = useNavigation();
-
   return (
     <FlatList
       data={data}
@@ -24,7 +22,7 @@ export default function NavOptions({ handlePress }) {
       renderItem={({ item }) => (
         <TouchableOpacity
           style={tw`px-4 pb-8 pt-4 bg-gray-100 m-2`}
-          onPress={handlePress}
+          onPress={() => handlePress(item.screen)}
         >
           <View>
             <Image

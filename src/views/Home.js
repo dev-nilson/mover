@@ -1,9 +1,13 @@
 import { StyleSheet, SafeAreaView, View, Image, TextInput } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import tw from "twrnc";
 import NavOptions from "../components/NavOptions";
 
 export default function Home() {
-  const handlePress = () => {
+  const navigation = useNavigation();
+
+  const handlePress = (screen) => {
+    navigation.navigate(screen);
     console.log("PRESS");
   };
 
