@@ -1,5 +1,4 @@
 import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
 import tw from "twrnc";
 
