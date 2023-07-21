@@ -7,25 +7,24 @@ import {
   Text,
 } from "react-native";
 import tw from "twrnc";
+import { useDispatch } from "react-redux";
 import NavOptions from "../components/NavOptions";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
-      <View style={tw`p-5`}>
+      <View style={tw`pt-5 pb-0 px-5`}>
         <Image
-          style={{ width: 100, height: 100, resizeMode: "contain" }}
+          style={{ width: 75, height: 75, resizeMode: "contain" }}
           source={{
             uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png",
           }}
         />
-        <NavOptions />
       </View>
-      <View style={tw`py-5`}>
-        <View style={tw`p-5 my-2 flex items-center border-b border-gray-200`}>
-          <Text style={tw`text-xl`}>☀️ Good morning</Text>
-        </View>
-        <View style={tw`p-5`}>
+      <View>
+        <View style={tw`px-5`}>
           <TextInput
             style={tw`py-3 px-4 m-2 font-semibold text-lg bg-gray-100`}
             placeholder="From"
@@ -34,6 +33,9 @@ export default function Home() {
             style={tw`py-3 px-4 m-2 font-semibold text-lg bg-gray-100`}
             placeholder="To"
           />
+        </View>
+        <View style={tw`px-5 mt-5`}>
+          <NavOptions />
         </View>
       </View>
     </SafeAreaView>
