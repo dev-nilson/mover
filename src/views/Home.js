@@ -4,15 +4,11 @@ import {
   View,
   Image,
   TextInput,
-  Text,
 } from "react-native";
 import tw from "twrnc";
-import { useDispatch } from "react-redux";
 import NavOptions from "../components/NavOptions";
 
 export default function Home() {
-  const dispatch = useDispatch();
-
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View style={tw`pt-5 pb-0 px-5`}>
