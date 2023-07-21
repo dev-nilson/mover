@@ -1,14 +1,12 @@
-import {
-  StyleSheet,
-  SafeAreaView,
-  View,
-  Image,
-  TextInput,
-} from "react-native";
+import { StyleSheet, SafeAreaView, View, Image, TextInput } from "react-native";
 import tw from "twrnc";
 import NavOptions from "../components/NavOptions";
 
 export default function Home() {
+  const handlePress = () => {
+    console.log("PRESS");
+  };
+
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View style={tw`pt-5 pb-0 px-5`}>
@@ -31,7 +29,7 @@ export default function Home() {
           />
         </View>
         <View style={tw`px-5 mt-5`}>
-          <NavOptions />
+          <NavOptions handlePress={handlePress} />
         </View>
       </View>
     </SafeAreaView>

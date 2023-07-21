@@ -13,7 +13,7 @@ const data = [
   },
 ];
 
-export default function NavOptions() {
+export default function NavOptions({ handlePress }) {
   const navigation = useNavigation();
 
   return (
@@ -24,7 +24,7 @@ export default function NavOptions() {
       renderItem={({ item }) => (
         <TouchableOpacity
           style={tw`px-4 pb-8 pt-4 bg-gray-100 m-2`}
-          onPress={() => navigation.navigate(item.screen)}
+          onPress={handlePress}
         >
           <View>
             <Image
