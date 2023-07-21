@@ -8,7 +8,6 @@ export default function Home() {
 
   const handlePress = (screen) => {
     navigation.navigate(screen);
-    console.log("PRESS");
   };
 
   return (
